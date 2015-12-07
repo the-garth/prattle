@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
 
   after_create :create_default_conversation
 
-  mount_uploader :avatar, ImageUploader
-
 
   private
 

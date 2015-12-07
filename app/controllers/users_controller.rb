@@ -6,11 +6,4 @@ class UsersController < ApplicationController
       @conversations = Conversation.involving(current_user).order("created_at DESC")
   end
 
-  def create
-    u = User.new
-    u.avatar = params[:avatar]
-
-    u.avatar.url.save!
-  end
-
 end
