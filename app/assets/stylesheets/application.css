@@ -33,4 +33,12 @@
   color: red;
  }
 
+ .Signup > li > a:hover {
+     color: black;
+ }
+
+ .alert-sucess {
+   background-color: #FFCDD2;
+ }
+
 
