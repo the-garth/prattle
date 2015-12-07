@@ -1,0 +1,28 @@
+body {
+  font-family: Serif;
+}
+
+img {
+  margin-top: -20px;
+  height: 55px;
+  margin-left: -50px;
+}
+.navbar-fixed-top {
+    background-color: black;
+    color: white;
+    border-radius:0;
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: white !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: red !important;
+}
+
+
+/*a {
+  text-transform: uppercase;
+  color: white;
+}*/

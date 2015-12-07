@@ -14,3 +14,7 @@
  *= require bootstrap
  *= require_self
  */
+ body {
+   font-family: Serif;
+   letter-spacing: 0.5px;
+ }
