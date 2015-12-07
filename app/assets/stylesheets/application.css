@@ -14,7 +14,7 @@
  *= require bootstrap
  *= require_self
  */
-<<<<<<< HEAD
+
  body {
    font-family: Serif;
    letter-spacing: 0.5px;
@@ -43,9 +43,7 @@
  }
 
 
-=======
-
  .navbar-inverse .navbar-nav>li>a {
      color: white;
  }
->>>>>>> 8d5f51e40701bb7e467c440e7f9b93cf5a58b233
+
