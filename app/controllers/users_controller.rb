@@ -5,4 +5,12 @@ class UsersController < ApplicationController
       @users = User.where.not("id = ?",current_user.id).order("created_at DESC")
       @conversations = Conversation.involving(current_user).order("created_at DESC")
   end
+
+  def create
+    u = User.new
+    u.avatar = params[:avatar]
+
+    u.avatar.url.save!
+  end
+
 end

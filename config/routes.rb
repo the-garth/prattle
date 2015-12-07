@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :uploads
+
   authenticated :user do
     root 'users#index'
   end

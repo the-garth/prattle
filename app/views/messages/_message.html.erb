@@ -1,8 +1,8 @@
 <li class="<%=  self_or_other(message) %>">
   <div class="chatboxmessagecontent">
-    <div class="avatar">
-      <img src="http://placehold.it/50x50" />
-    </div>
+    <!-- <div class="avatar">
+      <img src="<%= message.user.name %>" />
+    </div> -->
     <div class="user-wrapper">
       <p class="username col-md-8"><strong><%= message_interlocator(message).name %></strong></p>
       <p class="col-md-8"><%= message.body %></p>
