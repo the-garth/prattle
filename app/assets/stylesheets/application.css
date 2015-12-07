@@ -18,3 +18,19 @@
    font-family: Serif;
    letter-spacing: 0.5px;
  }
+
+ img {
+   margin-top: -20px;
+   height: 55px;
+   margin-left: -50px;
+ }
+
+ legend, label {
+   color: white;
+ }
+
+ a {
+  color: red;
+ }
+
+
