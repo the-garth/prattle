@@ -63,7 +63,6 @@ var ready = function () {
         chatBox.chatWith(conversation_id);
     });
 
-
 }
 
 $(document).ready(ready);
