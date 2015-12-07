@@ -1,11 +1,13 @@
 body {
-background: url(main_background.png) no-repeat center center fixed;
+  background-image: image-url("main_background.png");
+  background-repeat: no-repeat;
+  background-position: center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-max-height: 100%;
-margin-top: -10px;
+  max-height: 100%;
+  margin-top: -10px;
 }
 
 .alert.alert-success {
