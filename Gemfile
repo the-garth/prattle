@@ -26,6 +26,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use devise for authentication
 gem 'devise'
 
+# Carrierwave for file upload
+gem 'carrierwave'
+
+# Socket chat through Faye
+gem 'private_pub'
+gem 'thin'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

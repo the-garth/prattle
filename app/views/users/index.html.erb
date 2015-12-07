@@ -1,0 +1,9 @@
+<% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td>
+        <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+                    "data-sid" => current_user.id, "data-rip" => user.id %>
+      </td>
+    </tr>
+<% end %>
