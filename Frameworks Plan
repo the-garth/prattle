@@ -1,0 +1,6 @@
+Frameworks:
+
+Rails
+Devise for login
+Firebase for chat storage
+Multitenancy with apartment gem for channel subdomains
