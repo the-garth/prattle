@@ -15,7 +15,7 @@ class ConversationsController < ApplicationController
 
   def show
     @conversation = Conversation.find(params[:id])
-    @reciever = interlocutor(@conversation)
+    @reciever = interlocator(@conversation)
     @messages = @conversation.messages
     @message = Message.new
   end
@@ -25,7 +25,7 @@ class ConversationsController < ApplicationController
     params.permit(:sender_id, :recipient_id)
   end
 
-  def interlocutor(conversation)
+  def interlocator(conversation)
     current_user == conversation.recipient ? conversation.sender : conversation.recipient
   end
 end

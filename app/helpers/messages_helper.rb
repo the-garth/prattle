@@ -3,7 +3,7 @@ module MessagesHelper
     message.user == current_user ? "self" : "other"
   end
 
-  def message_interlocutor(message)
+  def message_interlocator(message)
     message.user == message.conversation.sender ? message.conversation.sender : message.conversation.recipient
   end
 end

@@ -9,40 +9,40 @@ body {
 }
 
 .alert.alert-success {
-  background-color: red;
+  background-color: #EA4132;
   color: white;
-  border: red;
+  border: #EA4132;
 }
 
 legend {
   color: white;
-/*  text-transform: uppercase;*/
   letter-spacing: 0.5px;
   font-family: Sans;
+  border: 0 !important;
 }
 
 input.btn.btn-primary {
-  background-color: red;
-  border: red;
+  background-color: #EA4132;
+  border: #EA4132;
 }
 
 
 input.btn.btn-success {
-  background-color: red;
-  border: red;
+  background-color: #EA4132;
+  border: #EA4132;
 }
 
 .col-md-offset-4 {
 margin-top: 20px;
 padding: 10px;
-background-color: black;
+background-color: #222;
 float: right !important;
 margin-right: 10px;
 border-radius: 15px;
 }
 
 .navbar-fixed-top {
-    background-color: black;
+    background-color: #222;
     color: white;
     border-radius:0;
 }
@@ -52,11 +52,11 @@ ul.nav li a, ul.nav li a:visited {
 }
 
 ul.nav li a:hover, ul.nav li a:active {
-    color: red !important;
+    color: #EA4132 !important;
 }
 
 .Signup > li > a:hover {
-    color: black;
+    color: #222;
 }
 
 

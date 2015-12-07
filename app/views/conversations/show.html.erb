@@ -1,8 +1,8 @@
 <div class="panel-heading">
   <div class="chatboxtitle">
     <i class="fa fa-comments"></i>
-
     <h5><%= @reciever.name %> </h5>
+    <%= link_to "<i class='fa fa-times float-right'></i> ".html_safe, "#", class: "closeChat", "data-cid" => @conversation.id %>
   </div>
 </div>
 <div class="chatboxcontent">
@@ -16,5 +16,4 @@
       <%= f.submit :Send, class: "button btn btn-danger", "data-cid" => @conversation.id %>
   <% end %>
 </div>
-
 <%= subscribe_to conversation_path(@conversation) %>

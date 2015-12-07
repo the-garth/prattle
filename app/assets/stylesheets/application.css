@@ -20,6 +20,10 @@
    letter-spacing: 0.5px;
  }
 
+ .float-right {
+   float: right;
+ }
+
  nav img {
    margin-top: -20px;
    height: 55px;
@@ -31,11 +35,16 @@
  }
 
  a {
-  color: red;
+  color: #EA4132;
+ }
+
+ a:hover {
+  color: white;
+  text-decoration: none;
  }
 
  .Signup > li > a:hover {
-     color: black;
+     color: #222;
  }
 
  .alert-sucess {
