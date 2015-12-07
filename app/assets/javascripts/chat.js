@@ -1,13 +1,3 @@
-/**
- * Chat logic
- *
- * Most of the js functionality is inspired from anatgarg.com
- * jQuery tag Module from the tutorial
- * http://anantgarg.com/2009/05/13/gmail-facebook-style-jquery-chat/
- *
- */
-
-
 var chatboxFocus = new Array();
 var chatBoxes = new Array();
 
@@ -94,14 +84,12 @@ var ready = function () {
                 return;
             }
 
-            $("body").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
+            $("#chat-container").append('<div id="chatbox_' + conversation_id + '" class="chatbox"></div>')
 
             $.get("conversations/" + conversation_id, function (data) {
                 $('#chatbox_' + conversation_id).html(data);
                 $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
             }, "html");
-
-            $("#chatbox_" + conversation_id).css('bottom', '0px');
 
             chatBoxeslength = 0;
 
@@ -200,7 +188,8 @@ var ready = function () {
         },
 
         /**
-         * Responsible for handling minimize and maximize of the chatbox
+         * Responsible for handling the growth of chatboxes as they increase on the page
+         * Keeps track of the minimized chatboxes etc
          *
          * @param conversation_id
          */
