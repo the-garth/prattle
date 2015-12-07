@@ -27,7 +27,7 @@
 }
 
 .chatboxcontent {
-    font-family: arial, sans-serif;
+    font-family: 'Times New Roman', serif;
     height: 480px;
     width: 100%;
     overflow-y: auto;
