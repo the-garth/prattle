@@ -2,5 +2,6 @@ Frameworks:
 
 Rails
 Devise for login
-Firebase for chat storage
+jQuery Chat
+Private Pub + Faye for socket chat
 Multitenancy with apartment gem for channel subdomains
