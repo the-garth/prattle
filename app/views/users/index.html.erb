@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <div style="height: 600px; overflow-y: auto;">
+    <div style="max-height: 600px; overflow-y: auto;">
       <div class="panel panel-default">
         <div class="panel-heading">Registered Users</div>
         <table class="table">
@@ -25,32 +25,35 @@
           </tbody>
         </table>
       </div>
-      <div id="chat-container" class="col-md-12">
-
-      </div>
-    </div>
-    
-    <hr>
-    <h3>Your prattles</h3>
-    <div style="height: 400px; overflow-y: auto;">
-      <% if @conversations.any? %>
-          <ul class="media-list">
-            <% @conversations.each do |conversation| %>
-                <li class="media">
-                  <%= image_tag("http://placehold.it/50x50", class: "media-object pull-left") %>
-                  <div class="media-body">
-                    <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
-                        <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
-                        <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
-                  </div>
-                </li>
-
-            <% end %>
-          </ul>
-      <% else %>
-          <p>You currently have no prattles.</p>
-      <% end %>
     </div>
   </div>
-  
+  <div class="col-md-12">
+    <div id="chat-container">
+    </div>
+  </div>
+  <div class="col-md-12" style="margin-top: 20px;">
+    <div class="panel panel-default">
+      <div class="panel-heading">Your Prattles</div>
+      <div style="max-height: 400px; overflow-y: auto; padding: 10px;">
+        <% if @conversations.any? %>
+            <ul class="media-list">
+              <% @conversations.each do |conversation| %>
+                  <li class="media">
+                    <%= image_tag("http://placehold.it/50x50", class: "media-object pull-left") %>
+                    <div class="media-body">
+                      <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
+                          <h4 class="media-heading"><strong><%= conversation_interlocutor(conversation).name %></strong></h4>
+                          <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
+                    </div>
+                  </li>
+
+              <% end %>
+            </ul>
+        <% else %>
+            <p>You currently have no prattles.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 </div>

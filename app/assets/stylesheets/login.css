@@ -1,5 +1,5 @@
 body {
-background: url(main_background.png) no-repeat center center fixed; 
+background: url(main_background.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -41,10 +41,6 @@ margin-right: 10px;
 border-radius: 15px;
 }
 
-img {
-  margin-top: -20px;
-  height: 55px;
-}
 .navbar-fixed-top {
     background-color: black;
     color: white;

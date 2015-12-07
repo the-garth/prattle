@@ -20,7 +20,7 @@
    letter-spacing: 0.5px;
  }
 
- img {
+ nav img {
    margin-top: -20px;
    height: 55px;
    /*margin-left: -50px;*/
@@ -46,4 +46,3 @@
  .navbar-inverse .navbar-nav>li>a {
      color: white;
  }
-
