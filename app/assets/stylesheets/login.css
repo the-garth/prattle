@@ -1,0 +1,70 @@
+body {
+background: url(main_background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+max-height: 100%;
+margin-top: -10px;
+}
+
+.alert.alert-success {
+  background-color: red;
+  color: white;
+  border: red;
+}
+
+legend {
+  color: white;
+/*  text-transform: uppercase;*/
+  letter-spacing: 0.5px;
+  font-family: Sans;
+}
+
+input.btn.btn-primary {
+  background-color: red;
+  border: red;
+}
+
+
+input.btn.btn-success {
+  background-color: red;
+  border: red;
+}
+
+.col-md-offset-4 {
+margin-top: 20px;
+padding: 10px;
+background-color: black;
+float: right !important;
+margin-right: 10px;
+border-radius: 15px;
+}
+
+img {
+  margin-top: -20px;
+  height: 55px;
+}
+.navbar-fixed-top {
+    background-color: black;
+    color: white;
+    border-radius:0;
+}
+
+ul.nav li a, ul.nav li a:visited {
+    color: white !important;
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+    color: red !important;
+}
+
+.Signup > li > a:hover {
+    color: black;
+}
+
+
+/*a {
+  text-transform: uppercase;
+  color: white;
+}*/
