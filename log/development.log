@@ -57025,3 +57025,17 @@ Processing by ConversationsController#show as HTML
   Rendered messages/_message.html.erb (15.0ms)
   Rendered conversations/show.html.erb (24.4ms)
 Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 1.5ms)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /Users/andrewgower/Development/prattlechat/app/models/user.rb:9)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:User> at /Users/andrewgower/Development/prattlechat/app/models/user.rb:9)
