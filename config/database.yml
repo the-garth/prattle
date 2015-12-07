@@ -78,8 +78,8 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: prattle_production
-  username: prattle
-  password: <%= ENV['PRATTLE_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+#   database: prattle_production
+#   username: prattle
+#   password: <%= ENV['PRATTLE_DATABASE_PASSWORD'] %>
