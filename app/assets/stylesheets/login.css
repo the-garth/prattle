@@ -21,6 +21,10 @@ legend {
   border: 0 !important;
 }
 
+input {
+  outline: 0;
+}
+
 .edit-i {
   color: white;
   font-family: 'Times New Roman', serif;
