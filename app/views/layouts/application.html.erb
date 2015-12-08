@@ -26,8 +26,8 @@
     <audio id="chatAudio"><source src="/sounds/notification.mp3" type="audio/mpeg"></audio>
     <script>
       $( document ).ready(function() {
-        $( '.reset' ).each(function(){
-          this.reset();
+        $('#reset').on('click', function () {
+          $('.reset').find('input:text').val('');
         });
       });
     </script>
