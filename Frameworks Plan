@@ -1,6 +1,5 @@
-Frameworks:
+Framework and gems:
 
 Rails
 Devise for login
-Firebase for chat storage
-Multitenancy with apartment gem for channel subdomains
+private_pub and faye for socket chat
