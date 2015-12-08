@@ -19,12 +19,23 @@ var ready = function () {
         notify: function () {
             var audioplayer = $('#chatAudio')[0];
             audioplayer.play();
+        },
 
-            // if (Notification.permission === "granted") {
-            //
-            //   var notification = new Notification("New message");
-            //
-            // }
+        restructure: function () {
+            align = 0;
+            for (x in chatBoxes) {
+                chatbox_id = chatBoxes[x];
+
+                if ($("#chatbox_" + chatbox_id).css('display') != 'none') {
+                    if (align == 0) {
+                        $("#chatbox_" + chatbox_id).css('right', '20px');
+                    } else {
+                        width = (align) * (280 + 7) + 20;
+                        $("#chatbox_" + chatbox_id).css('right', width + 'px');
+                    }
+                    align++;
+                }
+            }
 
         },
 
@@ -61,6 +72,25 @@ var ready = function () {
             }
 
             chatBoxes.push(conversation_id);
+
+            if (minimizeChatBox == 1) {
+                minimizedChatBoxes = new Array();
+
+                if ($.cookie('chatbox_minimized')) {
+                    minimizedChatBoxes = $.cookie('chatbox_minimized').split(/\|/);
+                }
+                minimize = 0;
+                for (j = 0; j < minimizedChatBoxes.length; j++) {
+                    if (minimizedChatBoxes[j] == conversation_id) {
+                        minimize = 1;
+                    }
+                }
+
+                if (minimize == 1) {
+                    $('#chatbox_' + conversation_id + ' .chatboxcontent').css('display', 'none');
+                    $('#chatbox_' + conversation_id + ' .chatboxinput').css('display', 'none');
+                }
+            }
 
             chatboxFocus[conversation_id] = false;
 
@@ -110,7 +140,51 @@ var ready = function () {
             } else {
                 $(chatboxtextarea).css('overflow', 'auto');
             }
+
         },
+
+        toggleChatBoxGrowth: function (conversation_id) {
+            if ($('#chatbox_' + conversation_id + ' .chatboxcontent').css('display') == 'none') {
+
+                var minimizedChatBoxes = new Array();
+
+                if ($.cookie('chatbox_minimized')) {
+                    minimizedChatBoxes = $.cookie('chatbox_minimized').split(/\|/);
+                }
+
+                var newCookie = '';
+
+                for (i = 0; i < minimizedChatBoxes.length; i++) {
+                    if (minimizedChatBoxes[i] != conversation_id) {
+                        newCookie += conversation_id + '|';
+                    }
+                }
+
+                newCookie = newCookie.slice(0, -1)
+
+
+                $.cookie('chatbox_minimized', newCookie);
+                $('#chatbox_' + conversation_id + ' .chatboxcontent').css('display', 'block');
+                $('#chatbox_' + conversation_id + ' .chatboxinput').css('display', 'block');
+                $("#chatbox_" + conversation_id + " .chatboxcontent").scrollTop($("#chatbox_" + conversation_id + " .chatboxcontent")[0].scrollHeight);
+            } else {
+
+                var newCookie = conversation_id;
+
+                if ($.cookie('chatbox_minimized')) {
+                    newCookie += '|' + $.cookie('chatbox_minimized');
+                }
+
+
+                $.cookie('chatbox_minimized', newCookie);
+                $('#chatbox_' + conversation_id + ' .chatboxcontent').css('display', 'none');
+                $('#chatbox_' + conversation_id + ' .chatboxinput').css('display', 'none');
+            }
+
+        }
+
+
+
     }
 
     jQuery.cookie = function (name, value, options) {
@@ -142,7 +216,7 @@ var ready = function () {
                 var cookies = document.cookie.split(';');
                 for (var i = 0; i < cookies.length; i++) {
                     var cookie = jQuery.trim(cookies[i]);
-
+                    
                     if (cookie.substring(0, name.length + 1) == (name + '=')) {
                         cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                         break;
@@ -153,24 +227,6 @@ var ready = function () {
         }
     };
 
-    // function getNotificationPermission() {
-    //
-    //   if (!("Notification" in window)) {
-    //     console.log("This browser does not support desktop notification");
-    //   }
-    //
-    //   else if (Notification.permission !== 'denied') {
-    //     Notification.requestPermission(function (permission) {
-    //
-    //       if(!('permission' in Notification)) {
-    //         Notification.permission = permission;
-    //       }
-    //
-    //     });
-    //   }
-    //
-    // };
-    // getNotificationPermission();
 
 }
 
